@@ -1,3 +1,6 @@
-<input type="text" name="{{ name }}" value="{{ value }}" id="{{ attrs.id }}"
-class="colorfield_field"/>
-<script>$('.color').colorPicker();</script>
+<input type="text" name="{{ name }}" value="{{ value }}" id="{{ attrs.id }}" class="color"/>
+<script>
+(function($){
+    $('.color').colorPicker({{ js_options }});
+})('django' in window && django.jQuery ? django.jQuery: jQuery);
+</script>
