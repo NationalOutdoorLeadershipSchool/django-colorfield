@@ -6,17 +6,25 @@ django models and forms.
 
 Makes use of http://www.dematte.at/tinyColorPicker/
 
+Requirements
+------------
+* `Django  <https://www.djangoproject.com/>`_ 1.7.0+
+* `jQuery <http://jquery.com/>`_ 1.11.0+
 
 Installation
 ============
 
-Add `colorfield` to your `INSTALLED_APPS`.
+#. Install django-colorfield using pip. For example::
+
+    pip install django-colorfield
+
+#. Add  ``datetimewidget`` to your INSTALLED_APPS.
 
 Collect static files with ``./manage.py collectstatic``.
 
-Then in your models, you can use it like this:
-
-.. code-block:: python
+Basic Configuration
+-------------------
+#. Create your model and add a ColorField  ::
 
     from django.db import models
     from colorfield.fields import ColorField
