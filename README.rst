@@ -1,12 +1,10 @@
-**Notice:** I no longer use django on a day-to-day basis (actually, it's been several years), and am **not actively maintaining this module**. If you would like to take over, please let me know. If you find a bug and file a pull request, I'll happily accept it.
-
 Django Colorfield
 ---------------------
 
 This module fills the need of having a 'colorfield' that's usable in both
 django models and forms.
 
-Makes use of http://jscolor.com/.
+Makes use of http://www.dematte.at/tinyColorPicker/
 
 
 Installation
