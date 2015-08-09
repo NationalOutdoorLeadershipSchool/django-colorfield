@@ -20,7 +20,7 @@ Installation
 
 #. Add  ``colorfield`` to your INSTALLED_APPS.
 
-Collect static files with ``./manage.py collectstatic``.
+#. Collect static files with ``./manage.py collectstatic``.
 
 Basic Configuration
 -------------------
