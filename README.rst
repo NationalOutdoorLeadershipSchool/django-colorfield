@@ -18,9 +18,9 @@ Installation
 
     pip install django-colorfield
 
-#. Add  ``datetimewidget`` to your INSTALLED_APPS.
+#. Add  ``colorfield`` to your INSTALLED_APPS.
 
-Collect static files with ``./manage.py collectstatic``.
+#. Collect static files with ``./manage.py collectstatic``.
 
 Basic Configuration
 ===================
