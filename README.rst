@@ -53,3 +53,4 @@ Widget Options
 * opacity - Show/Hide opacity slider (Boolean)
 * preventFocus - Prevent user input in CharField (Boolean)
 * customBG - Set custom BG color e.g. '#FFFFFF' (String)
+* animationSpeed - Set length of widget display animation (Int)
