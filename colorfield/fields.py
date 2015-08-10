@@ -50,12 +50,14 @@ class ColorWidget(forms.Widget):
         js = [settings.STATIC_URL + 'colorfield/colorpicker/jqColorPicker.min.js']
         
     def render(self, name, value, attrs=None):
-        options_list = []
-        for k, v in iter(self.options.items()):
-            options_list.append("%s: %s" % (k, quote(k, v)))
+        js_options = ''
+        if self.options:
+            options_list = []
+            for k, v in iter(self.options.items()):
+                options_list.append("%s: %s" % (k, quote(k, v)))
 
-        js_options = ",\n".join(options_list)
-        js_options = mark_safe('{%s}' % js_options)
+            js_options = ",\n".join(options_list)
+            js_options = mark_safe('{%s}' % js_options)
         return render_to_string('colorfield/color.html', locals())
 
 
