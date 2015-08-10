@@ -13,7 +13,6 @@ Requirements
 
 Installation
 ============
-
 #. Install django-colorfield using pip. For example::
 
     pip install django-colorfield
@@ -32,3 +31,25 @@ Basic Configuration
     class Show(models.Model):
         title = models.CharField(u'Title', max_length=250)
         color = ColorField()
+
+#. Create model form to configure ColorWidget options ::
+
+    from django import forms
+    from .models import Show
+    from colorfield.widgets import ColorWidget
+
+    class ShowForm(forms.ModelForm):
+        def __init__(self, *args, **kwargs):
+            super(ShowForm, self).__init__(*args, **kwargs)
+            self.fields['color'].widget = ColorWidget(options={'opacity': False,
+                                                               'preventFocus': True})
+
+        class Meta:
+            model = Show
+            fields = '__all__'
+
+Widget Options
+==============
+* opacity - Show/Hide opacity slider (Boolean)
+* preventFocus - Prevent user input in CharField (Boolean)
+* customBG - Set custom BG color e.g. '#FFFFFF' (String)
